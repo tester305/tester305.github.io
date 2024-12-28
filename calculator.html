@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css" id="theme-link">
+</head>
+<body>
+    <div class="switch-container">
+        <label class="switch">
+            <input type="checkbox" id="mode-switch" onchange="toggleMode()">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="calculator">
+        <input type="text" id="display" oninput="updatePreview()" disabled />
+        <div id="answer-preview"></div>
+        <div class="buttons">
+            <button onclick="appendNumber(1)">1</button>
+            <button onclick="appendNumber(2)">2</button>
+            <button onclick="appendNumber(3)">3</button>
+            <button onclick="operate('+')">+</button>
+            <button onclick="appendNumber(4)">4</button>
+            <button onclick="appendNumber(5)">5</button>
+            <button onclick="appendNumber(6)">6</button>
+            <button onclick="operate('-')">-</button>
+            <button onclick="appendNumber(7)">7</button>
+            <button onclick="appendNumber(8)">8</button>
+            <button onclick="appendNumber(9)">9</button>
+            <button onclick="operate('*')">*</button>
+            <button onclick="appendNumber(0)">0</button>
+            <button onclick="appendDecimal()">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="operate('/')">/</button>
+            <button onclick="memoryAdd()">M+</button>
+            <button onclick="memorySubtract()">M-</button>
+            <button onclick="memoryRecall()">MR</button>
+            <button onclick="memoryClear()">MC</button>
+        </div>
+    </div>
+    <button id="settings-button" onclick="toggleSettings()">S</button>
+    <div id="settings" class="settings-menu hidden">
+        <label for="concat-mode">Concatenation Mode:</label>
+        <input type="checkbox" id="concat-mode" onchange="toggleConcatMode()">
+        <p>Calculator Beta</p>
+    </div>
+    <div class="history" id="history">
+        <h3>History</h3>
+        <ul id="history-list"></ul>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
