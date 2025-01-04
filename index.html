@@ -28,16 +28,23 @@
             <button onclick="appendNumber(7)">7</button>
             <button onclick="appendNumber(8)">8</button>
             <button onclick="appendNumber(9)">9</button>
-            <button onclick="operate('*')">*</button>
+            <button onclick="operate('*')">×</button> <!-- Updated: Multiplication -->
             <button onclick="appendNumber(0)">0</button>
             <button onclick="appendDecimal()">.</button>
             <button onclick="calculate()">=</button>
             <button onclick="clearDisplay()">C</button>
-            <button onclick="operate('/')">/</button>
+            <button onclick="operate('/')">÷</button> <!-- Updated: Division -->
             <button onclick="memoryAdd()">M+</button>
             <button onclick="memorySubtract()">M-</button>
             <button onclick="memoryRecall()">MR</button>
             <button onclick="memoryClear()">MC</button>
+            <!-- New Scientific Function Buttons -->
+            <button onclick="squareRoot()">√</button>
+            <button onclick="exponent()">^</button>
+            <button onclick="log()">log</button>
+            <button onclick="trigFunction('sin')">sin</button>
+            <button onclick="trigFunction('cos')">cos</button>
+            <button onclick="trigFunction('tan')">tan</button>
         </div>
     </div>
     <button id="settings-button" onclick="toggleSettings()">S</button>
@@ -48,8 +55,11 @@
     </div>
     <div class="history" id="history">
         <h3>History</h3>
-        
         <ul id="history-list"></ul>
+    </div>
+    <!-- Notification Section -->
+    <div id="notification" class="notification hidden">
+        <p>Tip: If bright screens bother you, try switching to dark mode for a more comfortable experience.</p>
     </div>
     <script src="scripts.js"></script>
 </body>
