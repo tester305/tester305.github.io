@@ -97,19 +97,13 @@ button:active {
     width: 200px;
 }
 
-#settings label {
-    color: lightgray; /* Change the color to light gray */
-}
-
-#settings p {
-    color: lightgray;
-    font-size: 14px;
-    text-align: center;
+#settings label, #settings p {
+    color: var(--text-color);
 }
 
 .history {
     position: fixed;
-    right: 20px;
+    left: 20px;
     top: 20px;
     background-color: var(--calc-bg);
     color: var(--input-color);
@@ -180,6 +174,37 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+/* Notification styles */
+.notification {
+    background-color: var(--calc-bg);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 250px;
+    z-index: 1000;
+    transition: opacity 0.3s, transform 0.3s;
+    cursor: grab;
+}
+
+.notification.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.notification.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.notification.swiped {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
 /* Dark Mode */
 :root {
     --bg-color: #282c34;
@@ -192,6 +217,7 @@ input:checked + .slider:before {
     --button-hover: #282c34;
     --button-active: #61dafb;
     --button-active-text: #20232a;
+    --text-color: lightgray;
 }
 
 /* Light Mode */
@@ -206,4 +232,33 @@ input:checked + .slider:before {
     --button-hover: #ccc;
     --button-active: #bbb;
     --button-active-text: #000;
+    --text-color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .calculator {
+        width: 90%;
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .buttons button {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #settings-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .settings-menu {
+        width: 90%;
+    }
 }
