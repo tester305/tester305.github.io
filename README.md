@@ -5,8 +5,8 @@ This is how the calculator might look like:
 ![image](https://github.com/user-attachments/assets/123a7098-66d8-4faf-a6e7-0c8029d7e591)
 Tutorial how to install with git.
 Step 1:Navigate to the directory where you want to clone the repository.                                                     
- ```cd Downloads```
-Step 2:Clone my repository.                                                                                                 
+ ```cd Downloads```                                                                                                           
+ Step 2:Clone my repository.                                                                                                 
  ```git clone https://github.com/tester305/tester305.github.io```
 Step 3:Optional,if you want you can navigate to the repository's folder.                                                     
 ```cd tester305.github.io```
