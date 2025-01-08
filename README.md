@@ -7,6 +7,5 @@ Tutorial how to install with git.
 Step 1:Navigate to the directory where you want to clone the repository.                                                     
  ```cd Downloads```                                                                                                           
  Step 2:Clone my repository.                                                                                                 
- ```git clone https://github.com/tester305/tester305.github.io```
-Step 3:Optional,if you want you can navigate to the repository's folder.                                                     
+ ```git clone https://github.com/tester305/tester305.github.io```                                                             Step 3:Optional,if you want you can navigate to the repository's folder.                                                     
 ```cd tester305.github.io```
