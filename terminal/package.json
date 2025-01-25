@@ -1,0 +1,19 @@
+{
+  "name": "javascript-console",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify script.js -o bundle.js --ignore osx-temperature-sensor"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "systeminformation": "^5.25.11"
+  },
+  "keywords": []
+}
