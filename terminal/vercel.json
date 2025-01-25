@@ -12,6 +12,10 @@
   ],
   "routes": [
     {
+      "src": "/api/neofetch",
+      "dest": "/terminal/api/server.js"
+    },
+    {
       "src": "/terminal/api/neofetch",
       "dest": "/terminal/api/server.js"
     },
