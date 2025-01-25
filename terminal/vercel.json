@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "terminal/api/server.js",
+      "src": "api/server.js",
       "use": "@vercel/node"
     },
     {
@@ -13,15 +13,15 @@
   "routes": [
     {
       "src": "/api/neofetch",
-      "dest": "/terminal/api/server.js"
-    },
-    {
-      "src": "/terminal/api/neofetch",
-      "dest": "/terminal/api/server.js"
+      "dest": "/api/server.js"
     },
     {
       "src": "/terminal/(.*)",
       "dest": "/terminal/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/terminal/index.html"
     }
   ]
 }
