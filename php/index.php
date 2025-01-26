@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo 'Advanced Calculator'; ?></title>
+    <link rel="stylesheet" href="styles.css" id="theme-link">
+</head>
+<body>
+    <div class="switch-container">
+        <label class="switch">
+            <input type="checkbox" id="mode-switch" onchange="toggleMode()">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="calculator">
+        <input type="text" id="display" oninput="updatePreview()" disabled />
+        <div id="answer-preview"></div>
+        <div class="buttons">
+            <button onclick="appendNumber(1)">1</button>
+            <button onclick="appendNumber(2)">2</button>
+            <button onclick="appendNumber(3)">3</button>
+            <button onclick="operate('+')">+</button>
+            <button onclick="appendNumber(4)">4</button>
+            <button onclick="appendNumber(5)">5</button>
+            <button onclick="appendNumber(6)">6</button>
+            <button onclick="operate('-')">-</button>
+            <button onclick="appendNumber(7)">7</button>
+            <button onclick="appendNumber(8)">8</button>
+            <button onclick="appendNumber(9)">9</button>
+            <button onclick="operate('*')">×</button> <!-- Updated: Multiplication -->
+            <button onclick="appendNumber(0)">0</button>
+            <button onclick="appendDecimal()">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="operate('/')">÷</button> <!-- Updated: Division -->
+            <button onclick="memoryAdd()">M+</button>
+            <button onclick="memorySubtract()">M-</button>
+            <button onclick="memoryRecall()">MR</button>
+            <button onclick="memoryClear()">MC</button>
+            <!-- New Scientific Function Buttons -->
+            <button onclick="squareRoot()">√</button>
+            <button onclick="exponent()">^</button>
+            <button onclick="log()">log</button>
+            <button onclick="trigFunction('sin')">sin</button>
+            <button onclick="trigFunction('cos')">cos</button>
+            <button onclick="trigFunction('tan')">tan</button>
+        </div>
+    </div>
+    <button id="settings-button" onclick="toggleSettings()">S</button>
+    <div id="settings" class="settings-menu hidden">
+        <label for="concat-mode">Concatenation Mode:</label>
+        <input type="checkbox" id="concat-mode" onchange="toggleConcatMode()">
+        <p><?php echo 'Calculator Beta'; ?></p>
+    </div>
+    <div class="history" id="history">
+        <h3><?php echo 'History'; ?></h3>
+        <ul id="history-list"></ul>
+    </div>
+    <!-- Notification Section -->
+    <div id="notification" class="notification hidden">
+        <p><?php echo 'Tip: If bright screens bother you, try switching to dark mode for a more comfortable experience.'; ?></p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
